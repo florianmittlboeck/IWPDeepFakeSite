@@ -5,36 +5,143 @@
 	<title>Deep Fake Information</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+	<style>
+		.container {
+			padding: 50px;
+		}
+		
+		h1, h2 {
+			margin-bottom: 20px;
+			font-weight: bold;
+			text-align: center;
+		}
+		
+		.image-box {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 20px;
+		}
+		
+		.image-box img {
+			max-width: 100%;
+			max-height: 400px;
+		}
+		
+		.quote {
+			font-style: italic;
+			margin-bottom: 20px;
+		}
+		
+		.source {
+			font-size: 12px;
+			font-style: italic;
+			color: #999;
+		}
+	</style>
+
 </head>
-<body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">Deep Fake Information</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav">
-				<li class="nav-item active">
-					<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">About</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Contact</a>
-				</li>
-			</ul>
+<body><nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Deep Fake Wiki</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#introduction">Introduction</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#history">History</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#examples">Examples</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#concerns">Concerns</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main class="container">
+    
+    <!-- Introduction -->
+    <section id="introduction">
+        <h1>Deep Fake Wiki</h1>
+        
+        <h2>Introduction</h2>
+        
+        <p>Deep fake is a term used to describe artificial intelligence-based technology used to create or manipulate video, audio, or image content in a way that seems authentic but is actually fabricated. The term "deep fake" comes from the combination of "deep learning" and "fake."</p>
+        
+        <p>Deep fake technology has advanced significantly in recent years and can be used for a variety of purposes, including creating fake news, pornography, and propaganda. It is important to understand the potential dangers of deep fake technology and how it can be used to manipulate public opinion and spread misinformation.</p>
+    </section>
+    
+    <hr>
+    
+    <!-- History -->
+    <section id="history">
+        <h2>History</h2>
+        
+        <p>The use of deep fake technology began to gain attention</p> 
+        
+        <p>Since then, deep fake technology has advanced rapidly and has been used for a variety of purposes, both benign and malicious. Researchers and developers have also created tools to detect deep fakes and prevent their spread.</p>
+		
+		<div class="image-box">
+			<img src="https://cdn.pixabay.com/photo/2019/06/05/00/31/artificial-intelligence-4258151_1280.jpg" alt="Deep Fake AI image">
 		</div>
-	</nav>
-	
-	<div class="container">
-		<h1>Welcome to Deep Fake Information</h1>
-		<p>This is a single page application that utilizes the Bootstrap framework.</p>
 		
-		<!-- Add your content here -->
+		<blockquote class="quote">
+			"Deepfakes are a powerful tool for malicious actors because they can be used to spread disinformation and propaganda, manipulate public opinion, and undermine trust in institutions."
+		</blockquote>
+		<p class="source">- The Brookings Institution</p>
 		
-	</div>
+	</section>
 	
+	<hr>
+	
+	<!-- Examples -->
+	<section id="examples">
+		<h2>Examples</h2>
+		
+		<h3>Politics</h3>
+		<p>Deep fake technology has been used to create fake videos of politicians and world leaders, which can be used to spread disinformation and influence public opinion. In 2018, a video of former President Barack Obama was created using deep fake technology and went viral on social media.</p>
+		
+		<h3>Entertainment</h3>
+		<p>Deep fake technology has also been used in the entertainment industry to create digital replicas of deceased actors. For example, the late actor James Dean was "cast" in a new movie using deep fake technology.</p>
+		
+		<h3>Pornography</h3>
+		<p>One of the most well-known uses of deep fake technology is the creation of fake celebrity pornographic videos, which can be used to spread malicious content online.</p>
+		
+	</section>
+	
+	<hr>
+	
+	<!-- Concerns -->
+	<section id="concerns">
+		<h2>Concerns</h2>
+		
+		<p>There are several concerns associated with deep fake technology, including:</p>
+		
+		<ul>
+			<li>The potential for deep fakes to spread disinformation and influence public opinion</li>
+			<li>The potential for deep fakes to be used for criminal activities, such as blackmail and fraud</li>
+			<li>The potential for deep fakes to undermine trust in institutions and the media</li>
+			<li>The difficulty of detecting deep fakes, which can make it difficult to combat their spread</li>
+		</ul>
+		
+		<p>As deep fake technology continues to advance, it is important for individuals and organizations to be aware of these concerns and take steps to prevent the spread of malicious deep fakes.</p>
+	</section>
+	
+</main>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+
 	<!-- Bootstrap JavaScript -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
