@@ -1,18 +1,18 @@
 body, html {
     height: 100%;
     margin: 0;
-  }
-  
-  .intro-header {
+}
+
+.intro-header {
     position: relative;
     height: 100%;
     color: #f8f8f8;
     width: 100%;
     text-align: center;
     background-size: cover;
-  }
-  
-  .video-background {
+}
+
+.video-background {
     position: absolute;
     top: 0;
     left: 0;
@@ -20,9 +20,9 @@ body, html {
     height: 100%;
     overflow: hidden;
     z-index: -1;
-  }
-  
-  .overlay {
+}
+
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -30,50 +30,39 @@ body, html {
     width: 100%;
     background: #000;
     opacity: 0.6;
-  }
-  
-  .intro-content {
+}
+
+.intro-content {
     position: relative;
     padding: 20%;
-  }
+}
 
-  /* ... */
-
-  .video-parallax-container {
+.video-parallax-container {
     position: relative;
     overflow: hidden;
     height: 100vh;
-  }
-  
-  .video-parallax {
+}
+
+.video-parallax {
     width: 100%;
     height: 92%;
     object-fit: cover;
     object-position: center center;
-  }
-  
-  
-  .parallax-content {
+}
+
+.parallax-content {
     position: absolute;
     padding: 20%;
     z-index: 1;
     top: 0;
     transform: translate(20%, 0%);
-  }
-  
-  /* ... */
-  
+}
 
-
-
-
-
-
-  .box {
+.box {
     max-width: 100%;
     max-height: 400px;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     padding: 10px;
     margin: 15px;
     background-color: white;
@@ -114,12 +103,13 @@ body, html {
     overflow: hidden;
 }
 
-#previewImage { 
+#previewImage {
     background-color: #4a70f8;
     border-bottom: #4a70f8 2px solid ;
     height: 65px;
     text-align: center;
     overflow: hidden;
+    width: 100%;
 }
 
 #video {
@@ -128,7 +118,6 @@ body, html {
     max-height: 100%;
     margin: 100px;
 }
-
 
 .previewTitle {
     font-family: sans-serif;
@@ -151,11 +140,111 @@ body, html {
     padding: 10px;
     flex-wrap: wrap;
     overflow: hidden;
-    padding-top: 25px;
-
+    padding-bottom: 25px;
 }
 
-.previewBody{
-    background-color: rgba(211, 211, 211, 0.171);
-    height: 100%;
+/* Responsive styles */
+@media only screen and (max-width: 1200px) {
+    .display-4 {
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .display-4 {
+        font-size: 3rem;
+    }
+    .previewBox {
+        width: 250px;
+        height: 200px;
+    }
+    .icon {
+        font-size: 24px;
+        top: calc(50% - 24px);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .intro-content, .parallax-content {
+        padding: 10%;
+    }
+    .previewBox {
+        width: 200px;
+        height: 150px;
+    }
+    .icon {
+        font-size: 20px;
+        top: calc(50% - 20px);
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .intro-content, .parallax-content {
+        padding: 5%;
+    }
+    .previewBox {
+        width: 150px;
+        height: 100px;
+        margin-left: 20px;
+    }
+    .icon {
+        font-size: 16px;
+        top: calc(50% - 16px);
+    }
+}
+
+.previewContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.previewBox {
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background: white;
+}
+
+.previewBody {
+    text-align: center;
+}
+
+.icon {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+
+.previewTitle {
+    font-size: 1.1em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.previewText {
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* Add media queries */
+
+@media screen and (max-width: 768px) {
+    .previewBox {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .previewBox {
+        width: calc(100% - 40px);
+    }
 }
