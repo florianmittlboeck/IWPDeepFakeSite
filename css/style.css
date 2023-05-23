@@ -71,7 +71,7 @@ body, html {
 .icon{
     font-size: 32px;
     color: white;
-    position:relative;
+    position: relative;
     top: calc(50% - 30px); /* 50% - 3/4 of icon height */
 }
 
@@ -105,10 +105,10 @@ body, html {
 
 #previewImage {
     background-color: #4a70f8;
-    border-bottom: #4a70f8 2px solid ;
+    border-bottom: #4a70f8 2px solid;
     height: 65px;
     text-align: center;
-    overflow: hidden;
+    overflow: visible;
     width: 100%;
 }
 
