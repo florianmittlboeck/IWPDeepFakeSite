@@ -203,7 +203,6 @@ body, html {
 .previewBox {
     width: 500px;
     height: 300px;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -247,4 +246,26 @@ body, html {
     .previewBox {
         width: calc(100% - 40px);
     }
+}
+
+.circle {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: #c5d2ff;
+    z-index: 100;
+    position: relative;
+    left: 100px;
+}
+
+
+.circle2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 100;
+    position: relative;
+    left: 90%;
+    top: 80px;
 }
