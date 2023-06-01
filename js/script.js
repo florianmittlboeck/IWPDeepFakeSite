@@ -4,8 +4,13 @@
       transform: "translateY(" + -0.5*scroll + "px)"
     });
     $(".overlay").css({
-        transform: "translateY(" + -0.5*scroll + "px)"
-      });
+      transform: "translateY(" + -0.5*scroll + "px)"
+    });
+    $(".intro-text").css({
+      transform: "translateY(" + -0.5*scroll + "px)"
+    });
+
+      
   });
 
  //JSON-Daten abrufen und anzeigen
