@@ -53,17 +53,26 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#introduction">Introduction</a>
+                    <a class="nav-link" href="#intro">Was ist Deepfake?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#history">History</a>
+                    <a class="nav-link" href="#einsatz">Einsatz von Deepfake</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#examples">Examples</a>
+                    <a class="nav-link" href="#quellen">Sichere Quellen</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#concerns">Concerns</a>
+                    <a class="nav-link" href="#tipps">Tipps & Tricks</a>
                 </li>
+				<li class="nav-item">
+					<a class="nav-link" href="#regierung">Was macht die Regierung?</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#news">Aktuelle News</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#impressum">Impressum</a>
+				</li>
             </ul>
         </div>
     </div>
@@ -91,12 +100,12 @@
 </div>
 
 <!-- Main Content -->
-<main class="">
+<main>
     <!-- Your other content -->
 
     <!-- Preview Container Section -->
 	<section class="previewContainer d-flex flex-wrap justify-content-center"> 
-        <div class="previewBox text-center">
+        <div id="box1" class="previewBox text-center">
 			<div id="previewImage">
 			  <img src="assets/like_unlike.png" alt="Like Unlike Icon" width="250px">
 			</div>
@@ -109,7 +118,7 @@
 			  </div>
 			</div>
 		</div>
-		  <div class="previewBox text-center">
+		<div id="box2" class="previewBox text-center">
 			<div id="previewImage">
 			  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="50" fill="white" class="bi bi-quote" viewBox="0 0 16 16">
 				<path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/>
@@ -124,8 +133,8 @@
 					  
 			  </div>
 			</div>
-		  </div>
-		  <div class="previewBox text-center">
+		</div>
+		<div id ="box3" class="previewBox text-center">
 			<div id="previewImage">
 			  <img src="assets/recherche.png" alt="Icon Recherche" width="250px">
 			</div>
@@ -137,8 +146,8 @@
 					  
 			  </div>
 			</div>
-		  </div>
-		  <div class="previewBox text-center">
+		</div>
+		<div id="box4" class="previewBox text-center">
 			<div id="previewImage">
 			  <svg xmlns="http://www.w3.org/2000/svg" width="35" height="50" fill="white" class="bi bi-lightbulb-fill" viewBox="0 0 16 16">
 				<path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"/>
@@ -152,8 +161,8 @@
 			  <div class="previewText">
 			  </div>
 			</div>
-		  </div>
-		  <div class="previewBox text-center">
+		</div>
+		<div id="box5" class="previewBox text-center">
 			<div id="previewImage">
 			  <img src="assets/regierung.png" alt="Icon Regierung" width="250px">
 			</div>
@@ -164,8 +173,8 @@
 			  <div class="previewText">
 			  </div>
 			</div>
-		  </div>
-		  <div class="previewBox text-center">
+		</div>
+		<div id="box6" class="previewBox text-center">
 			<div id="previewImage">
 				<svg xmlns="http://www.w3.org/2000/svg" width="35" height="50" fill="white" class="bi bi-newspaper" viewBox="0 0 16 16">
 					<path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"/>
@@ -181,69 +190,53 @@
 			  <div class="previewText">
 			  </div>
 			</div>
-		  </div>
-        <!-- More previewBoxes as needed -->
+		</div>
 	</section>
 
-    <!-- Your other content -->
 </main>
 
     <hr>
     
-    <!-- History -->
-    <section id="history">
-        <h2>History</h2>
-        
-        <p>The use of deep fake technology began to gain attention</p> 
-        
-        <p>Since then, deep fake technology has advanced rapidly and has been used for a variety of purposes, both benign and malicious. Researchers and developers have also created tools to detect deep fakes and prevent their spread.</p>
-		
-		<div class="image-box">
-			<img src="https://cdn.pixabay.com/photo/2019/06/05/00/31/artificial-intelligence-4258151_1280.jpg" alt="Deep Fake AI image">
-		</div>
-		
-		<blockquote class="quote">
-			"Deepfakes are a powerful tool for malicious actors because they can be used to spread disinformation and propaganda, manipulate public opinion, and undermine trust in institutions."
-		</blockquote>
-		<p class="source">- The Brookings Institution</p>
-		
+    <section id="intro" class="sectionfulltext">
+        <h2>DeepFakes - was ist das eigentlich?</h2>
+		<div class="fullText"></div>
 	</section>
-	
 	<hr>
 	
-	<!-- Examples -->
-	<section id="examples">
-		<h2>Examples</h2>
-		
-		<h3>Politics</h3>
-		<p>Deep fake technology has been used to create fake videos of politicians and world leaders, which can be used to spread disinformation and influence public opinion. In 2018, a video of former President Barack Obama was created using deep fake technology and went viral on social media.</p>
-		
-		<h3>Entertainment</h3>
-		<p>Deep fake technology has also been used in the entertainment industry to create digital replicas of deceased actors. For example, the late actor James Dean was "cast" in a new movie using deep fake technology.</p>
-		
-		<h3>Pornography</h3>
-		<p>One of the most well-known uses of deep fake technology is the creation of fake celebrity pornographic videos, which can be used to spread malicious content online.</p>
-		
+	<hr>
+    
+    <section id="einsatz" class="sectionfulltext">
+        <h2>Einsatz und Auswirkungen von DeepFakes</h2>
+		<div class="fullText"></div>
 	</section>
-	
 	<hr>
 	
-	<!-- Concerns -->
-	<section id="concerns">
-		<h2>Concerns</h2>
-		
-		<p>There are several concerns associated with deep fake technology, including:</p>
-		
-		<ul>
-			<li>The potential for deep fakes to spread disinformation and influence public opinion</li>
-			<li>The potential for deep fakes to be used for criminal activities, such as blackmail and fraud</li>
-			<li>The potential for deep fakes to undermine trust in institutions and the media</li>
-			<li>The difficulty of detecting deep fakes, which can make it difficult to combat their spread</li>
-		</ul>
-		
-		<p>As deep fake technology continues to advance, it is important for individuals and organizations to be aware of these concerns and take steps to prevent the spread of malicious deep fakes.</p>
+	<hr>
+    <section id="quellen" class="sectionfulltext">
+        <h2>Auf der Suche nach verlässlichen politischen Informationen: Eine Übersicht über sichere Quellen</h2>
+		<div class="fullText"></div>
 	</section>
+	<hr>
+	
+	<hr>
+    <section id="tipps" class="sectionfulltext">
+        <h2>DeepFakes enttarnen: Praktische Tipps für die Erkennung gefälschter Inhalte</h2>
+		<div class="fullText"></div>
+	</section>
+	<hr>
+	
+	<hr>
+    <section id="regierung" class="sectionfulltext">
+        <h2>Was macht die Regierung im Kampf gegen DeepFakes?</h2>
+		<div class="fullText"></div>
+	</section>
+	<hr>
 
+	<hr>
+    <section id="news" class="sectionfulltext">
+        <h2>Aktuelle Nachrichten und Informationen</h2>
+		<div class="fullText"></div>
+	</section>
 	<hr>
 	
 <!-- Bootstrap JavaScript -->
