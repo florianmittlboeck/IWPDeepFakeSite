@@ -10,6 +10,19 @@
       transform: "translateY(" + -0.3*scroll + "px)"
     });
 
+    $(".circle").css({
+      transform: "translateY(" + -0.1*scroll + "px)"
+    });
+    $(".circle2").css({
+      transform: "translateY(" + -0.09*scroll + "px)"
+    });
+    $(".circle3").css({
+      transform: "translateY(" + -0.2*scroll + "px)"
+    });
+    $(".circle4").css({
+      transform: "translateY(" + -0.5*scroll + "px)"
+    });
+
       
   });
 
@@ -41,8 +54,17 @@ function displayJSONData(data) {
     }
   }
 }
+// Parse cookies into an object
+const cookies = document.cookie.split(';').reduce((cookies, item) => {
+  const [name, value] = item.split('=');
+  cookies[name.trim()] = value;
+  return cookies;
+}, {});
 
-fetch('https://infodeepfake.projekte.fh-hagenberg.at/php/MariaDBConnector.php?lang=de')
+// Get language from cookies or use default
+const lang = cookies.lang || 'de';
+
+fetch(`https://infodeepfake.projekte.fh-hagenberg.at/php/MariaDBConnector.php?lang=${lang}`)
   .then(response => response.json())
   .then(data => displayFullText(data))
   .catch(error => console.log(error));
@@ -62,7 +84,7 @@ function displayFullText(data) {
       const fullTextElement = section.querySelector('.fullText');
 
       // MainText aus den Daten in das HTML-Element einfügen
-      fullTextElement.textContent = item.MainText;
+      fullTextElement.innerHTML = linkify(item.MainText);
     }
   }
 }
@@ -112,8 +134,45 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+$(document).ready(function(){
+    $(".dropdown-item").click(function(){
+        var selectedLanguage = $(this).attr("data-value"); // Get the selected language
+        var selectedFlag = $(this).attr("data-flag"); // Get the flag image URL
+
+        // Set the button text and flag to the selected language
+        $("#languageDropdown").html('<img id="selectedFlag" src="' + selectedFlag + '" alt="' + selectedLanguage + '" width="20" height="20"> ' + selectedLanguage);
+
+        // Set the cookie
+        var cookieValue = selectedLanguage == "English" ? "en" : "de";
+        document.cookie = "lang=" + cookieValue + ";path=/;";
+    });
+
+    // Check if the 'lang' cookie is set on page load
+    var cookies = decodeURIComponent(document.cookie).split(';');
+    for(var i = 0; i < cookies.length; i++) {
+        var c = cookies[i].trim();
+        if (c.indexOf("lang=") == 0) {
+            var lang = c.substring(5, c.length);
+            var selectedLanguage = lang == "en" ? "English" : "German";
+            var selectedFlag = lang == "en" ? "assets/english.png" : "assets/german.webp";
+
+            // Set the dropdown button text and flag image
+            $("#languageDropdown").html('<img id="selectedFlag" src="' + selectedFlag + '" alt="' + selectedLanguage + '" width="20" height="20"> ' + selectedLanguage);
+        }
+    }
+});
 
 
+function linkify(inputText) {
+  var replacedText;
 
+  // URLs starting with http://, https://, or ftp://
+  var urlPattern = /(\b(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+  replacedText = inputText.replace(urlPattern, '<a href="$1" target="_blank">$1</a>');
 
+  // URLs starting with "www." (without // before it, or it'd re-link the ones done above).
+  var wwwPattern = /(^|[^\/])(www\.[\S]+(\b|$))/gim;
+  replacedText = replacedText.replace(wwwPattern, '$1<a href="http://$2" target="_blank">$2</a>');
 
+  return replacedText;
+}
