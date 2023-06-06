@@ -141,6 +141,8 @@ $(document).ready(function(){
         // Set the cookie
         var cookieValue = selectedLanguage == "English" ? "en" : "de";
         document.cookie = "lang=" + cookieValue + ";path=/;";
+
+        window.location.reload(); // Reload the page
     });
 
     // Check if the 'lang' cookie is set on page load
