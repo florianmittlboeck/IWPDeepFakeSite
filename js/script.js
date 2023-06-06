@@ -26,8 +26,18 @@
       
   });
 
+// Parse cookies into an object
+const cookies = document.cookie.split(';').reduce((cookies, item) => {
+  const [name, value] = item.split('=');
+  cookies[name.trim()] = value;
+  return cookies;
+}, {});
+
+// Get language from cookies or use default
+const lang = cookies.lang || 'de';
+
  //JSON-Daten abrufen und anzeigen Deutsch
-fetch('https://infodeepfake.projekte.fh-hagenberg.at/php/MariaDBConnector.php?lang=de')
+fetch(`https://infodeepfake.projekte.fh-hagenberg.at/php/MariaDBConnector.php?lang=${lang}`)
   .then(response => response.json())
   .then(data => displayJSONData(data))
   .catch(error => console.log(error));
@@ -46,31 +56,12 @@ function displayJSONData(data) {
       //JSON-Daten auf die entsprechenden HTML-Elemente in der Box mappen
       const titleElement = box.querySelector('.previewTitle');
       const previewTextElement = box.querySelector('.previewText');
-      //const fullTextElement = box.querySelector('.full-text');
 
       //HTML-Elemente mit den Daten aus der JSON-Datei füllen
       titleElement.textContent = item.Title;
       previewTextElement.textContent = item.IntroText;
-    }
-  }
-}
-// Parse cookies into an object
-const cookies = document.cookie.split(';').reduce((cookies, item) => {
-  const [name, value] = item.split('=');
-  cookies[name.trim()] = value;
-  return cookies;
-}, {});
 
-// Get language from cookies or use default
-const lang = cookies.lang || 'de';
-
-fetch(`https://infodeepfake.projekte.fh-hagenberg.at/php/MariaDBConnector.php?lang=${lang}`)
-  .then(response => response.json())
-  .then(data => displayFullText(data))
-  .catch(error => console.log(error));
-
-function displayFullText(data) {
-  const sections = document.getElementsByClassName('sectionfulltext');
+      const sections = document.getElementsByClassName('sectionfulltext');
 
   // Überprüfen, ob die JSON-Daten vorhanden sind und die Anzahl der Sections korrekt ist
   if (data && data.length >= sections.length) {
@@ -85,6 +76,14 @@ function displayFullText(data) {
 
       // MainText aus den Daten in das HTML-Element einfügen
       fullTextElement.innerHTML = linkify(item.MainText);
+
+      // HTML-Element mit der Klasse "mainHeading" in der aktuellen Section finden
+      const headingElement = section.querySelector('.mainHeading');
+
+      // Heading aus den Daten in das HTML-Element einfügen
+      headingElement.innerHTML = linkify(item.Title);
+        }
+      }
     }
   }
 }
@@ -130,9 +129,6 @@ document.addEventListener('DOMContentLoaded', function() {
     goToSection('news');
   });
 });
-
-
-
 
 $(document).ready(function(){
     $(".dropdown-item").click(function(){
