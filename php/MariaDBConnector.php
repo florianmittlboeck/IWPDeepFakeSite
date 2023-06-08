@@ -1,5 +1,4 @@
 <?php
-
 function utf8ize($mixed) {
     if (is_array($mixed)) {
         foreach ($mixed as $key => $value) {

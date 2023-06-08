@@ -63,27 +63,27 @@ function displayJSONData(data) {
 
       const sections = document.getElementsByClassName('sectionfulltext');
 
-  // Überprüfen, ob die JSON-Daten vorhanden sind und die Anzahl der Sections korrekt ist
-  if (data && data.length >= sections.length) {
+      // Überprüfen, ob die JSON-Daten vorhanden sind und die Anzahl der Sections korrekt ist
+      if (data && data.length >= sections.length) {
 
-    // Schleife über die Sections und die JSON-Daten
-    for (let i = 0; i < sections.length; i++) {
-      const section = sections[i];
-      const item = data[i];
+        // Schleife über die Sections und die JSON-Daten
+        for (let i = 0; i < sections.length; i++) {
+          const section = sections[i];
+          const item = data[i];
 
-      // HTML-Element mit der Klasse "fullText" in der aktuellen Section finden
-      const fullTextElement = section.querySelector('.fullText');
+          // HTML-Element mit der Klasse "fullText" in der aktuellen Section finden
+          const fullTextElement = section.querySelector('.fullText');
 
-      // MainText aus den Daten in das HTML-Element einfügen
-      fullTextElement.innerHTML = linkify(item.MainText);
+          // MainText aus den Daten in das HTML-Element einfügen
+          fullTextElement.innerHTML = linkify(item.MainText);
 
-      // HTML-Element mit der Klasse "mainHeading" in der aktuellen Section finden
-      const headingElement = section.querySelector('.mainHeading');
+          // HTML-Element mit der Klasse "mainHeading" in der aktuellen Section finden
+          const headingElement = section.querySelector('.mainHeading');
 
-      // Heading aus den Daten in das HTML-Element einfügen
-      headingElement.innerHTML = linkify(item.Title);
-        }
-      }
+          // Heading aus den Daten in das HTML-Element einfügen
+          headingElement.innerHTML = linkify(item.Title);
+            }
+          }
     }
   }
 }

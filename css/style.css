@@ -309,3 +309,17 @@ body, html {
 .nav-item svg{
     width: 30px;
 }
+
+
+  .previewBox {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .previewBox:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+
+  .previewText {
+    text-align: left;
+  }
