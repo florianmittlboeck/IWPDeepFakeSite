@@ -61,7 +61,7 @@
 <body>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">Deep Fake Wiki</a>
+        <a class="navbar-brand" href="/index.html">Deep Fake Wiki</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -102,7 +102,7 @@
 					</a>
 				</li>
 				<li class="nav-item" style="padding-left: 20px;">
-					<a class="nav-link" href="#impressum" style="color: white;">Impressum</a>
+					<a class="nav-link" href="/impressum.html" style="color: white;">Impressum</a>
 				</li>
 				<li class="nav-item">
 					<div class="dropdown">
@@ -132,7 +132,8 @@
 	<div class="overlay" style="display: none;"></div>
 	<div class="parallax-content text-center text-white">
 	  <h1 class="display-4">DEEPFAKE</h1>
-	  <p class="lead">Wenn die Grenze zwischen Realität und Fälschung verschwimmt</p>
+	  <p class="lead" id="VidTextDE">Wenn die Grenze zwischen Realität und Fälschung verschwimmt</p>
+	  <p class="lead" id="VidTextEN">When the line between reality and forgery becomes blurred</p>
 	</div>
 </div>
 <div class="circle"></div>
@@ -143,12 +144,18 @@
     <div class="container">
         <div class="row" style=" z-index: 2; position: relative;">
             <div class="col-md-6 text-center text-md-left">
-                <h1 class="my-4" style="font-size: 2.5em; font-weight: bold;">Herzlich Willkommen,</h1>
+                <h1 class="my-4" style="font-size: 2.5em; font-weight: bold;" id="textL-DE"> Herzlich Willkommen,</h1>
+                <h1 class="my-4" style="font-size: 2.5em; font-weight: bold;" id="textL-EN"> Welcome,</h1>
             </div>
-            <div class="col-md-6 text-center text-md-right">
+            <div class="col-md-6 text-center text-md-right" id="textR-DE">
                 <p class="my-4" style="font-size: 1.5em;">... auf unserer Website, die sich dem faszinierenden und zugleich beunruhigenden Phänomen der Deepfakes widmet. Deepfakes in der heutigen Zeit
                 werden immer schwieriger zu erkennen. Hier werden wir die vielfältigen Auswirkungen, Herausforderungen und Lösungsansätze rund um dieses revolutionäre Thema beleuchten.</p>
                 <p class="my-4" style="font-size: 1.2em;">Beauftragt vom Bildungsministerium.</p>
+            </div>
+			<div class="col-md-6 text-center text-md-right" id="textR-EN">
+                <p class="my-4" style="font-size: 1.5em;">... on our website dedicated to the fascinating and at the same time disturbing phenomenon of deepfakes. Deepfakes in today's time
+					are becoming increasingly difficult to detect. Here we will highlight the many implications, challenges and possible solutions surrounding this revolutionary topic.</p>
+                <p class="my-4" style="font-size: 1.2em;">Commissioned by the Ministry of Education.</p>
             </div>
         </div>
     </div>
@@ -279,12 +286,48 @@
 	
 	</div>
 	
-<!-- Bootstrap JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- Bootstrap JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 
 	<!-- Bootstrap JavaScript -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+	<script>
+
+		const textLDE = document.getElementById('textL-DE');
+		const textLEN = document.getElementById('textL-EN');
+		const textRDE = document.getElementById('textR-DE');
+		const textREN = document.getElementById('textR-EN');
+	
+
+		const VidTextDE = document.getElementById('VidTextDE');
+		const VidTextEN = document.getElementById('VidTextEN');
+
+
+		// Check the value of cookiesLang and adjust visibility accordingly
+		if(cookiesLang === "de") {
+			textLDE.style.display = 'block'; // Visible
+			textRDE.style.display = 'block'; // Visible
+			textLEN.style.display = 'none';  // Invisible
+			textREN.style.display = 'none';  // Invisible
+
+			VidTextDE.style.display = 'block'; // Visible
+			VidTextEN.style.display = 'none';  // Invisible
+
+		} else if(cookiesLang === "en") {
+			textLDE.style.display = 'none';   // Invisible
+			textRDE.style.display = 'none';   // Invisible
+			textLEN.style.display = 'block';  // Visible
+			textREN.style.display = 'block';  // Visible
+
+			VidTextDE.style.display = 'none';   // Invisible
+			VidTextEN.style.display = 'block';  // Visible
+		} else {
+			// Handle case where cookiesLang isn't "DE" or "EN", if necessary
+		}
+		
+		</script>
 </body>
 </html>
