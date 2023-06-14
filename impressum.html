@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Deep Fake Information</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <script src="js/script.js"></script>
+    
+    
+            <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="assets/favicon/site.webmanifest">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+        <style>
+            .sectionfulltext {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    max-width: 800px;
+    margin: auto;
+}
+
+.sectionfulltext div {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.sectionfulltext div:last-child {
+    margin-bottom: 0;
+}
+
+.invis {
+    display: none;
+}
+
+        </style>
+    
+    </head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Deep Fake Wiki</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" >
+                    <li class="nav-item" style=" visibility: hidden; ">
+                        <a class="nav-link" href="#intro"><img class="nav-image" src="assets/like_unlike.png" alt="Like Unlike Icon" width="200px"></a>
+                    </li>
+                    <li class="nav-item" style=" visibility: hidden; ">
+                        <a class="nav-link" href="#einsatz">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="nav-image" width="35" height="50" fill="white" class="nav-image" viewBox="0 0 16 16">
+                            <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/>
+                            <title>Quote Icon</title>
+                          </svg></a>
+                    </li>
+                    <li class="nav-item" style=" visibility: hidden; ">
+                        <a class="nav-link" href="#quellen">
+                            <img src="assets/recherche.png" alt="Icon Recherche" width="200px">
+                        </a>
+                    </li>
+                    <li class="nav-item" style=" visibility: hidden; ">
+                        <a class="nav-link" href="#tipps">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="50" fill="white" class="nav-image" viewBox="0 0 16 16">
+                            <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"/>
+                            <title>Lightbulb Icon</title>
+                          </svg></a>
+                    </li>
+                    <li class="nav-item" style=" visibility: hidden; ">
+                        <a class="nav-link" href="#regierung" >
+                            <img src="assets/regierung.png" alt="Icon Regierung" class="nav-image" width="200px" class="nav-image" style=" padding-bottom: 8px; ">
+                        </a>
+                    </li>
+                    <li class="nav-item" style=" visibility: hidden; ">
+                        <a class="nav-link" href="#news">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="50" fill="white" class="nav-image" viewBox="0 0 16 16">
+                            <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"/>
+                            <title>Newspaper Icon</title>
+                            <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"/>
+                          </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item" style="padding-left: 20px;">
+                        <a class="nav-link" href="#impressum" style="color: white;">Impressum</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle" style="color: white;cursor: pointer;" type="button" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img id="selectedFlag" src="" alt="" width="20" height="20" > Select Language
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                                <a class="dropdown-item" href="#" data-value="English" data-flag="assets/english.png"> <img id="selectedFlag" src="assets/english.png" alt="" width="20" height="20" >English</a>
+                                <a class="dropdown-item" href="#" data-value="German" data-flag="assets/german.webp"> <img id="selectedFlag" src="assets/german.webp" alt="" width="20" height="20" > German</a>
+                            </div>
+                        </div>
+                        
+                    
+                        <div id="selectedLanguageDiv" class="mt-3" style="display: none;">
+                            <button class="btn btn-success" id="selectedLanguageButton"></button>
+                        </div>
+                    </li>
+    
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <section id="impressum-en" class="my-5 sectionfulltext"> 
+            <div>
+                Impressum according to Austrian law for an information website about Deepfake:
+            </div>
+            <div>
+                Responsible for the content: Simon Mairinger, Florian Mittlböck, Jana Kralik, Anna Wasner
+            </div>
+            <div>
+                Address: Softwarepark 11, 4232 Hagenberg im Mühlkreis
+            </div>
+            <div>
+                Phone Number: +43 660/12345678
+            </div>
+            <div>
+                E-Mail: s2210892013@fhooe.at
+            </div>
+            <div>
+                Website: https://infodeepfake.projekte.fh-hagenberg.at/
+            </div>
+            <div>
+                Website content: information about deepfake technology
+            </div>
+            <div>
+                Consumers have the possibility to address complaints to the European Online Dispute Resolution platform: https://ec.europa.eu/odr
+            </div>
+            <div>
+                You can also address any vulnerable complaints to the email address provided above.
+            </div>
+        </section>
+        
+        <section id="impressum-de" class="my-5 sectionfulltext"> 
+            <div>
+                Impressum gemäß österreichischem Recht für eine Informationswebsite über Deepfake: 
+            </div>
+            <div>
+                Verantwortlich für den Inhalt: Simon Mairinger, Florian Mittlböck, Jana Kralik, Anna Wasner 
+            </div>
+            <div>
+                Adresse: Softwarepark 11, 4232 Hagenberg im Mühlkreis 
+            </div>
+            <div>
+                Telefon: + 43 660/12345678 
+            </div>
+            <div>
+                E-Mail: s2210892013@fhooe.at 
+            </div>
+            <div>
+                Webseite: https://infodeepfake.projekte.fh-hagenberg.at/ 
+            </div>
+            <div>
+                Websitegegenstand: Informationswebsite über Deepfake-Technologien 
+            </div>
+            <div>
+                Verbraucher haben die Möglichkeit, Beschwerden an die Online-Streitbeilegungsplattform der EU zu richten: https://ec.europa.eu/odr 
+            </div>
+            <div>
+                Sie können anfällige Beschwerden auch an die oben angegebene E-Mail-Adresse richten. 
+            </div>
+        </section>
+        
+</div>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Bootstrap JavaScript -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script>
+
+const impressumDe = document.getElementById('impressum-de');
+const impressumEn = document.getElementById('impressum-en');
+
+// Check the value of cookiesLang and adjust visibility accordingly
+if(cookiesLang === "de") {
+    impressumDe.style.display = 'block'; // Visible
+    impressumEn.style.display = 'none';  // Invisible
+} else if(cookiesLang === "en") {
+    impressumDe.style.display = 'none';   // Invisible
+    impressumEn.style.display = 'block';  // Visible
+} else {
+    // Handle case where cookiesLang isn't "DE" or "EN", if necessary
+}
+
+</script>
+
+
+</body>

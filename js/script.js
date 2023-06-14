@@ -35,6 +35,7 @@ const cookies = document.cookie.split(';').reduce((cookies, item) => {
 
 // Get language from cookies or use default
 const lang = cookies.lang || 'de';
+window.cookiesLang  = lang;
 
  //JSON-Daten abrufen und anzeigen Deutsch
 fetch(`https://infodeepfake.projekte.fh-hagenberg.at/php/MariaDBConnector.php?lang=${lang}`)
@@ -105,6 +106,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const box5 = document.getElementById('box5');
   const box6 = document.getElementById('box6');
 
+  if(box1){
+
   box1.addEventListener('click', function() {
     goToSection('intro');
   });
@@ -128,6 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
   box6.addEventListener('click', function() {
     goToSection('news');
   });
+}
 });
 
 $(document).ready(function(){
